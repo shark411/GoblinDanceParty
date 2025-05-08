@@ -18,6 +18,7 @@ namespace GME1003GoblinDanceParty
         private List<int> _starsX;      //list of star x-coordinates
         private List<int> _starsY;      //list of star y-coordinates
         private List<float> _starsRotation; //To make each star rotate differently
+        private List<float> _starsRotationAmount; //Make them spin at different speeds
 
         private Texture2D _starSprite;  //the sprite image for our star
 
@@ -25,7 +26,6 @@ namespace GME1003GoblinDanceParty
         private Color _starColor;       //let's have fun with colour!!
         private float _starScale;       //star size
         private float _starTransparency;//star transparency
-        private float _starRotation;    //star rotation
 
 
         //***This is for the goblin. Ignore it.
@@ -47,12 +47,12 @@ namespace GME1003GoblinDanceParty
             _starsX = new List<int>();  //stars X coordinate
             _starsY = new List<int>();  //stars Y coordinate
             _starsRotation = new List<float>(); //stars rotation
+            _starsRotationAmount = new List<float>(); //stars rotation amount
 
             _starColor = new Color(128 + _rng.Next(0,129), 128 + _rng.Next(0, 129), 128 + _rng.Next(0, 129));                   //this is a "relatively" easy way to create random colors
             _starScale = _rng.Next(50, 100) / 200f; //this will affect the size of the stars
             _starTransparency = _rng.Next(25, 101)/100f;   //star transparency
-            _starRotation = _rng.Next(0, 101) / 100f;       //star rotation
-
+            
             //use a separate for loop for each list - for practice
             //List of X coordinates
             for (int i = 0; i < _numStars; i++) 
@@ -72,10 +72,15 @@ namespace GME1003GoblinDanceParty
 
             //ToDo: List of transparency values
 
-            //ToDo: List of rotation values
+            //List of rotation values
             for (int i = 0; i < _numStars; i++)
             {
                 _starsRotation.Add(_rng.Next(0, 101) / 100f); //each should be random
+            }
+            //List of rotation speeds
+            for (int i = 0; i < _numStars; i++)
+            {
+                _starsRotationAmount.Add(_rng.Next(-100, 101) / 5000f);//each should spin randomly
             }
 
 
@@ -104,6 +109,10 @@ namespace GME1003GoblinDanceParty
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
 
+            for (int i = 0; i < _numStars; i++)
+            {
+                _starsRotation[i] += _starsRotationAmount[i];
+            }
    
             //***This is for the goblin. Ignore it for now.
             goblin.Update(gameTime);
