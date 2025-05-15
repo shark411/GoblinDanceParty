@@ -1,0 +1,32 @@
+1) How many of steps 1-6 did you complete?
+I completed 6 out of 6 steps.
+	YEP 1. Random number of stars. (Although, mine is between 100 and 300 instead of 50 and 300.)
+	YEP 2. Every star has a different rotation.
+	YEP 3. Every star has a different transparency.
+	YEP 4. Every star has a different size.
+	YEP 5. Every star has a different colour.
+	YEP 6. Make it your own. (Replaced STARS with CANDY. Added a background image.)
+
+2) How did you decide when it was appropriate to commit/push your changes?
+I tried to push a change for each step, if the step felt short, I combined two steps in my push.
+-ADDED PROJECT FILES.
+-One push for the random number of stars + star base rotation. 
+-One push for continuous star rotation. 
+-One push for star colours.
+-One push for star transparency. 
+-One push for different star scales + changing the background colour. 
+-One push for changing the STARS to CANDIES + adjusting the variable names accordingly. 
+-My final push will include the addition of my background image + this READ ME and any other minor tweaks.
+
+3) How many commit/pushes did you execute?
+In total, I should have 8 commits/pushes.
+
+4) Any specific troubles you had with GitHub or with completing the assignment?
+Very few problems. Only the simple ones that come with doing something new. Once I got the hang of things, it went well.
+If you must know, my problem was just finding where the changes of my code were displayed (I know it was shown in class,
+I just forgot).
+
+5) How did you use AI, if you did?
+No AI was used for this assignment. This intelligence is organic, from the crevices of my own brain. Although, I
+did get some help from the friends I made along the way (asking questions in class and having some classmates confirm my 
+GitHub was working properly). Thanks for explaining everything so well! :)

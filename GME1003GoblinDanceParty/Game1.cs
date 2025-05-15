@@ -24,6 +24,7 @@ namespace GME1003GoblinDanceParty
         private List<float> _candyScale; //candy size
 
         private Texture2D _candySprite;  //the sprite image for our candy
+        private Texture2D _backgroundSprite; //the sprite image for our baackground
 
         private Random _rng;            //for all our random number needs
 
@@ -100,8 +101,11 @@ namespace GME1003GoblinDanceParty
         {
             _spriteBatch = new SpriteBatch(GraphicsDevice);
 
-            //load out candy sprite
+            //load our candy sprite
             _candySprite = Content.Load<Texture2D>("Candy");
+
+            //load our background sprite
+            _backgroundSprite = Content.Load<Texture2D>("Les Voix");
 
 
             //***This is for the goblin. Ignore it for now.
@@ -135,6 +139,8 @@ namespace GME1003GoblinDanceParty
 
             
             _spriteBatch.Begin();
+            _spriteBatch.Draw(_backgroundSprite, new Vector2(0, 0), Color.White);
+
 
             //it would be great to have a background image here! 
             //you could make that happen with a single Draw statement.
